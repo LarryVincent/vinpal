@@ -1,11 +1,4 @@
-#' Vincent Default Color Palette
-#'
-#' A character vector of named hex codes used in visualizations and slide decks.
-#'
-#' @param named Logical. If TRUE (default), returns named vector. If FALSE, returns unnamed vector.
-#'
-#' @return A character vector of hex codes
-#' @export
+# Base and extended named palettes used for visualization
 base_palette <- c(
   sky = "#2D6A9B",
   sage = "#3E8D85",
@@ -100,7 +93,15 @@ tide_palette <- c(
   tide = "#5060AD"
 )
 
-get_palette <- function(name = "primary", named = TRUE) {
+
+#' Retrieve a palette by name
+#'
+#' @param name The name of the palette (e.g., "sky", "plum", etc.)
+#' @param named Logical. If TRUE (default), returns a named vector.
+#'
+#' @return A character vector of hex values
+#' @export
+get_palette <- function(name = "base", named = TRUE) {
   palettes <- list(
     base = base_palette,
     secondary = secondary_palette,

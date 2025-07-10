@@ -1,5 +1,7 @@
 #' Display a named color palette
 #'
+#' @importFrom graphics barplot mtext par text
+#' @importFrom grDevices col2rgb
 #' @param name The name of the palette (e.g., "primary", "blacks").
 #' @export
 show_palette <- function(name = "primary") {
